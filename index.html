@@ -19,40 +19,55 @@
 <body>
 	
 	<div class="container">
-		
+
+		<!-- header/title section of body -->
 		<div class="row">
 			<div class="column col-xs-12 text-center" id="heading">
-				<h1>Area1</h1>				
+				<h1>Hangman Game: ***** Edition!</h1>				
 			</div>
 		</div>
 
 		<div class="row">
+			<!-- this section will track the user's info -->
 			<div class="column col-xs-12 text-center" id="tracker">
-				<div>Area2</div>					
+				<div class="panel panel-default">
+				  <div class="panel-heading text-center"><h3>Statistics are fun!</h3></div>
+				  <ul class="list-group">
+				    <li class="list-group-item text-left">Wins: <span id="wins"></span></li>
+				    <li class="list-group-item text-left">Losses: <span id="losses"></span></li>
+				    <li class="list-group-item text-left">Attempts: <span id="attempts"></span></li>
+				    <li class="list-group-item"><div class="button btn-primary btn-lg text-center"><span class="glyphicon glyphicon-refresh"></span> New Word</div></li>
+			      </ul>
 			</div>
 		</div>
 
 		<div class="row">
+			<!-- this section will display a hint or possibly be moved below or removed -->
 			<div class="column col-xs-12 text-center" id="clue">
-				<div>Area3</div>					
+				<div>Clue: <span id="clue"></span></div>					
 			</div>
 		</div>
 
 		<div class="row">
+			<!-- this section will have an interactive image that progresses as incorrect answers are logged -->
 			<div class="column col-xs-12 text-center" id="hangman">
-				<div>Area4</div>					
+				<div>Hangman Picture: More is Less</div>
+				<span id="hangman-image"></span>			
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="column col-xs-12 text-center" id="word">
-				<div>Area5</div>					
+			<!-- section containing current word(s) for user to guess -->
+			<div class="column col-xs-12 text-center" id="">
+				<div>Current Word: <span id="word"></span></div>					
 			</div>
 		</div>
 
 		<div class="row">
+			<!-- section stores incorrect letter(s) guessed and the remaining guesses -->
 			<div class="column col-xs-12 text-center" id="incorrect">
-				<div>Area6</div>					
+				<div>Incorrect Letters Guessed: <span id="letters"></span></div>
+				<div>Remaining Guesses: <span id="guesses"></span></div>
 			</div>
 		</div>
 
