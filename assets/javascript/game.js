@@ -54,6 +54,11 @@ userGuess = function() {
 			if (keyPress == this[i]) {
 				document.getElementById("word").splice(i, 1, currentWord[i]); 
 			}
+			if (currentWord != underscores) {
+				guesses.append = "You Win!!";
+				document.getElementById(wins).append(wins++);
+				document.getElementById(attempts).append(attempts++);
+			}
 			else {console.log(keyPress);
 				usedChars.push(keyPress);
 				document.getElementById("letters").innerHTML = usedChars.toString();
@@ -70,7 +75,6 @@ userGuess = function() {
 	      document.getElementById(attempts).append(attempts++);
 	    }
 	  }
-
 }
 //calling function
 userGuess();
