@@ -49,11 +49,16 @@ play();
 userGuess = function() {
 	document.onkeyup = function(event){
 		var keyPress = String.fromCharCode(event.keyCode);
-		console.log(keyPress);
-		usedChars.push(keyPress);
-		document.getElementById("letters").innerHTML = usedChars.toString();
+		
 		for (var i = 0; i < currentWord.length; i++) {
-			if (keyPress==) {}
+			if (keyPress == this[i]) {
+				document.getElementById("word").splice(i, 1, currentWord[i]); 
+			}
+			else {console.log(keyPress);
+				usedChars.push(keyPress);
+				document.getElementById("letters").innerHTML = usedChars.toString();
+				document.getElementById("guesses").innerHTML -= remainingGuesses;
+			}
 		}
 		// document.getElementById("letters").append() = 8
 	};
@@ -61,7 +66,8 @@ userGuess = function() {
 	    guesses.appendChild = remainingGuesses;
 	    if (guesses < 1) {
 	      guesses.append = "Game Over";
-	      getElementById(losses).append(losses++);
+	      document.getElementById(losses).append(losses++);
+	      document.getElementById(attempts).append(attempts++);
 	    }
 	  }
 
