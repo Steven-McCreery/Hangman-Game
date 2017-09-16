@@ -33,21 +33,14 @@
 				<div class="panel panel-default">
 				  <div class="panel-heading text-center"><h3>Statistics are fun!</h3></div>
 				  <ul class="list-group">
-				    <li class="list-group-item text-left">Wins: <span id="wins"></span></li>
+				    <li id="wins" class="list-group-item text-left">Wins: <span></span></li>
 				    <li class="list-group-item text-left">Losses: <span id="losses"></span></li>
 				    <li class="list-group-item text-left">Attempts: <span id="attempts"></span></li>
-				    <li class="list-group-item"><div class="button btn-primary btn-lg text-center"><span class="glyphicon glyphicon-refresh"></span> New Word <span class="glyphicon glyphicon-refresh"></span> (-_-+-_-Caution!-_-+-_-  New Word will count as attempt!)</div></li>
+				    <li class="list-group-item"><div class="button btn-primary btn-lg text-center"><span class="glyphicon glyphicon-refresh"></span> Reset Scores <span class="glyphicon glyphicon-refresh"></span></div></li>
 			      </ul>
 			</div>
 		</div>
-
-		<div class="row">
-			<!-- this section will display a hint or possibly be moved below or removed -->
-			<div class="column col-xs-12 text-center" id="clue">
-				<div>Clue: <span id="clue"></span></div>					
-			</div>
-		</div>
-
+		
 		<div class="row">
 			<!-- this section will have an interactive image that progresses as incorrect answers are logged -->
 			<div class="column col-xs-12 text-center" id="hangman">
