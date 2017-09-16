@@ -3,24 +3,22 @@
 window.onload = function () {
 
 //defining variables
-var remainingGuesses;
-var initialWin;
-var initialLoss;
-var initialAttempt;
-
 var remainingGuesses = 8;
-var initialWin = document.getElementById("wins");
-var initialLoss = document.getElementById("losses");
-var initialAttempt = document.getElementById("attempts");
-var remainingGuesses = document.getElementById("guesses");
+var initialWin = 0;
+var initialLoss = 0;
+var initialAttempt = 0;
 
-initialWin.append(0);
-initialLoss.append(0);
-initialAttempt.append(0);
-remainingGuesses.append(8)
+//writing initial score entries to page
+var initialWin = document.getElementById("wins").append(initialWin);
+var initialLoss = document.getElementById("losses").append(initialLoss);
+var initialAttempt = document.getElementById("attempts").append(initialAttempt);
+var remainingGuesses = document.getElementById("guesses").append(remainingGuesses);
+
+
 //defining the available characters for the game's user to guess/keyup
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h","i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s","t", "u", "v", "w", "x", "y", "z"];
 
+//word will be selected and input as underscores with spaces between each underscore for readability
 play = function () {
     words = ["lettuce", "pickles", "onion", "cheese", "ketchup", "mustard", "mayonnaise"];
     currentWord = words[Math.floor(Math.random() * words.length)];
@@ -33,12 +31,12 @@ play = function () {
     console.log(underscores);
     document.getElementById("word").append(underscores);
 }
-
+//calling function
 play();
 
 
 userGuess = function() {
-	onkeyup()
+	// onkeyup()
 	guesses = function () {
 	    guesses.appendChild = remainingGuesses;
 	    if (guesses < 1) {
@@ -47,13 +45,16 @@ userGuess = function() {
 	    }
 	  }
 }
-
+//calling function
 userGuess();
 
+
+//reset button functionality
 document.getElementById("button").onclick = function(){
-	var initialWin = document.getElementById("wins").append(0);
-	var initialLoss = document.getElementById("losses").append(0);
-	var initialAttempt = document.getElementById("attempts").append(0);
+	var initialWin = document.getElementById("wins").innerHTML = 0;
+	var initialLoss = document.getElementById("losses").innerHTML = 0;
+	var initialAttempt = document.getElementById("attempts").innerHTML = 0;
+	var remainingGuesses = document.getElementById("guesses").innerHTML = 8;
 	console.log("Reset Scores!");
 	};
 
